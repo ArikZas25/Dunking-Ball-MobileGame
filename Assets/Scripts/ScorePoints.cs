@@ -18,12 +18,12 @@ public class ScorePoints : MonoBehaviour{
     public void Update(){
         if (ComboNum > 10){
             ComboNum = 10;
-            comboNum.text = ComboNum.ToString();
+            comboNum.text = "combo:" + ComboNum.ToString();
         }
         if (ComboNum > 1) { 
-        comboNum.text = ComboNum.ToString();
+        comboNum.text = "combo:" + ComboNum.ToString();
         }else if (ComboNum <= 0) {
-         comboNum.text = 0.ToString();
+         comboNum.text = "combo:" + 0.ToString();
         }
     }
 
@@ -41,6 +41,9 @@ public class ScorePoints : MonoBehaviour{
             Debug.Log("combo");
         }
     }
+
+
+
 
 
 
