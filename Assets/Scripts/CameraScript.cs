@@ -6,7 +6,6 @@ public class CameraScript : MonoBehaviour
 {
     Transform player;
     float offsetX;
-    // Use this for initialization
     void Start()
     {
         GameObject player_go = GameObject.FindGameObjectWithTag("Player");
@@ -16,8 +15,6 @@ public class CameraScript : MonoBehaviour
         offsetX = transform.position.x - player.position.x;
 
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (player != null)
