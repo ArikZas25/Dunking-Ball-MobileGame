@@ -21,15 +21,15 @@ public class ScorePoints : MonoBehaviour{
         if (ComboNum > 10)
         {
             ComboNum = 10;
-            comboNum.text = "combo:" + ComboNum.ToString();
+            comboNum.text = "combo:+" + ComboNum.ToString();
         }
         else if (ComboNum <= 0)
         {
             comboNum.enabled = false;
-            comboNum.text = "combo:" + 0.ToString();
+            comboNum.text = "combo:+" + 0.ToString();
         }
         if (ComboNum > 0) { 
-        comboNum.text = "combo:" + ComboNum.ToString();
+        comboNum.text = "combo:+" + ComboNum.ToString();
         comboNum.enabled = true;
         }
     }
