@@ -10,30 +10,36 @@ public class ScorePoints : MonoBehaviour{
     public int ComboNum;
 
     void Start(){
-        tuchedRing = true;
+        tuchedRing = false;
         score = 0;
         ComboNum = 0;
+        comboNum.enabled = false;
     }
 
-    public void Update(){
-        if (ComboNum > 10){
+    public void Update()
+    {
+        if (ComboNum > 10)
+        {
             ComboNum = 10;
             comboNum.text = "combo:" + ComboNum.ToString();
         }
-        if (ComboNum > 1) { 
+        else if (ComboNum <= 0)
+        {
+            comboNum.enabled = false;
+            comboNum.text = "combo:" + 0.ToString();
+        }
+        if (ComboNum > 0) { 
         comboNum.text = "combo:" + ComboNum.ToString();
-        }else if (ComboNum <= 0) {
-         comboNum.text = "combo:" + 0.ToString();
+        comboNum.enabled = true;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D tuchedpoint){
        
-        if (tuchedpoint.tag == "point" && tuchedRing){
-            MyScoreText.text = score.ToString();
+        if (tuchedpoint.tag == "point" && tuchedRing){  
             score ++;
+            MyScoreText.text = score.ToString();
             Invoke("tuchedBeforePoint", 0.1f);
-            Debug.Log("point");
         }
         else if (tuchedpoint.tag == "point" && !tuchedRing)
         {
@@ -41,10 +47,6 @@ public class ScorePoints : MonoBehaviour{
             Debug.Log("combo");
         }
     }
-
-
-
-
 
 
 
@@ -60,8 +62,9 @@ public class ScorePoints : MonoBehaviour{
         ComboNum = 0;
     }
     private void GotComboPoint(){
+        score++;
+        ComboNum ++;
+        score += ComboNum;// add + 1
         MyScoreText.text = score.ToString();
-        score += ComboNum + 1;
-        ComboNum += 1;
     }
 }

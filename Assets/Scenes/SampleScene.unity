@@ -1412,6 +1412,7 @@ MonoBehaviour:
   comboNum: {fileID: 1736323848}
   score: 0
   ComboNum: 0
+  gameMeneger: {fileID: 1739445726}
 --- !u!1 &1593487257
 GameObject:
   m_ObjectHideFlags: 0
