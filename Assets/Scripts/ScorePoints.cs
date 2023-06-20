@@ -9,11 +9,14 @@ public class ScorePoints : MonoBehaviour{
     public int score;
     public int ComboNum;
 
+    public static bool CameraShake;
+
     void Start(){
         tuchedRing = false;
         score = 0;
         ComboNum = 0;
         comboNum.enabled = false;
+        CameraShake = false;
     }
 
     public void Update()
@@ -62,6 +65,7 @@ public class ScorePoints : MonoBehaviour{
         ComboNum = 0;
     }
     private void GotComboPoint(){
+        CameraShake = true;
         score++;
         ComboNum ++;
         score += ComboNum;// add + 1
