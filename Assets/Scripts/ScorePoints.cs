@@ -70,5 +70,11 @@ public class ScorePoints : MonoBehaviour{
         ComboNum ++;
         score += ComboNum;// add + 1
         MyScoreText.text = score.ToString();
+        Invoke("CameraStopShake", 0.5f);
+    }
+
+    private void CameraStopShake()
+    {
+        CameraShake = false;
     }
 }

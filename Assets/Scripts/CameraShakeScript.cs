@@ -7,8 +7,8 @@ public class CameraShakeScript : MonoBehaviour
 {
     public Transform cameraTransform;
     private Vector3 originalCameraPos;
-    public float shakeDuration = 1f;
-    public float shakeAmount = 0.7f;
+    public float shakeDuration = 1.0f;
+    public float shakeAmount = 1.0f;
     private bool canShake = false;
     private float shakeTimer;
 
@@ -20,7 +20,7 @@ public class CameraShakeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!ScorePoints.CameraShake) { }
+        if (ScorePoints.CameraShake) 
         {
             ShakeCamera();
         }
@@ -42,6 +42,7 @@ public class CameraShakeScript : MonoBehaviour
             {
                 cameraTransform.localPosition = originalCameraPos + Random.insideUnitSphere * shakeAmount;
                 shakeTimer -= Time.deltaTime;
+                
             }
             else
             {
