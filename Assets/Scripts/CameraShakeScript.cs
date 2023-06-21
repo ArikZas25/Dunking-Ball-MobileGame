@@ -8,7 +8,7 @@ public class CameraShakeScript : MonoBehaviour
     public Transform cameraTransform;
     private Vector3 originalCameraPos;
     public float shakeDuration = 1.0f;
-    public float shakeAmount = 1.0f;
+    public float shakeAmount = 0.1f;
     private bool canShake = false;
     private float shakeTimer;
 
@@ -33,23 +33,21 @@ public class CameraShakeScript : MonoBehaviour
         {
             canShake = true;
             shakeTimer = shakeDuration;
-        }
-
-
-        void StartCameraShakeEffect()
+        } 
+    }
+    void StartCameraShakeEffect()
+    {
+        if (shakeTimer > 0)
         {
-            if (shakeTimer > 0)
-            {
-                cameraTransform.localPosition = originalCameraPos + Random.insideUnitSphere * shakeAmount;
-                shakeTimer -= Time.deltaTime;
-                
-            }
-            else
-            {
-                shakeTimer = 0f;
-                cameraTransform.localPosition = originalCameraPos;
-                canShake = false;
-            }
+            cameraTransform.localPosition = originalCameraPos + Random.insideUnitSphere * shakeAmount * (ScorePoints.ComboNum * 0.2f);
+            shakeTimer -= Time.deltaTime;
+
+        }
+        else
+        {
+            shakeTimer = 0f;
+            cameraTransform.localPosition = originalCameraPos;
+            canShake = false;
         }
     }
 }

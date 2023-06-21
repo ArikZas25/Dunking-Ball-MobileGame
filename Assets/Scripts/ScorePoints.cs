@@ -7,7 +7,7 @@ public class ScorePoints : MonoBehaviour{
     public TMP_Text comboNum;
     private bool tuchedRing;
     public int score;
-    public int ComboNum;
+    public static int ComboNum;
 
     public static bool CameraShake;
 
