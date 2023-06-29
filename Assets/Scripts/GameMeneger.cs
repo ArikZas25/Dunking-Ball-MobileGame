@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class GameMeneger : MonoBehaviour
 {
     [SerializeField] private TMP_Text GameOverText;
-    [SerializeField] private TextMeshProUGUI MenuButton;
+    [SerializeField] private TextMeshProUGUI MenuButton; //does not conect to the tmpro button
     [SerializeField] private GameObject player;
 
 

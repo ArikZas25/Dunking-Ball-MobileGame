@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.004099995, y: 0.0020499825, z: 0}
-    m_Extent: {x: 0.6536, y: 0.64805, z: 0}
+    m_Center: {x: -0.0072000027, y: -0.0016500056, z: 0}
+    m_Extent: {x: 0.651, y: 0.64685, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1471,8 +1471,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0069999993, y: 0.0011000037, z: 0}
-    m_Extent: {x: 1.0015, y: 0.9972, z: 0}
+    m_Center: {x: 0.0018000007, y: -0.0020500124, z: 0}
+    m_Extent: {x: 0.9966, y: 0.99885, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1917,8 +1917,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0070500076, y: 0.0049500167, z: 0}
-    m_Extent: {x: 0.65255, y: 0.65495, z: 0}
+    m_Center: {x: -0.006650001, y: 0.0012000203, z: 0}
+    m_Extent: {x: 0.65304995, y: 0.658, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2602,7 +2602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverText: {fileID: 875464865}
-  MenuButton: {fileID: 0}
+  MenuButton: {fileID: 935864208}
   player: {fileID: 1465613871}
 --- !u!4 &1739445727
 Transform:
