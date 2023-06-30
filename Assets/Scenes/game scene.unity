@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0072000027, y: -0.0016500056, z: 0}
-    m_Extent: {x: 0.651, y: 0.64685, z: 0}
+    m_Center: {x: 0.0014500022, y: -0.0009999871, z: 0}
+    m_Extent: {x: 0.65365, y: 0.6562, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1471,8 +1471,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0018000007, y: -0.0020500124, z: 0}
-    m_Extent: {x: 0.9966, y: 0.99885, z: 0}
+    m_Center: {x: -0.00069999695, y: -0.0016000271, z: 0}
+    m_Extent: {x: 0.9963, y: 0.9921, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1917,8 +1917,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.006650001, y: 0.0012000203, z: 0}
-    m_Extent: {x: 0.65304995, y: 0.658, z: 0}
+    m_Center: {x: -0.005400002, y: -0.0009999871, z: 0}
+    m_Extent: {x: 0.6511, y: 0.6549, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2398,7 +2398,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1647102702}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1739445726}
+        m_TargetAssemblyTypeName: GameMeneger, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1647102702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2602,7 +2614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverText: {fileID: 875464865}
-  MenuButton: {fileID: 935864208}
+  MenuButton: {fileID: 1647102699}
   player: {fileID: 1465613871}
 --- !u!4 &1739445727
 Transform:
