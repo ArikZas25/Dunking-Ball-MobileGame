@@ -28,8 +28,8 @@ public class movmentforplayer : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        GameOverText.enabled = false;
-
+        GameOverText.enabled = false; 
+       
     }
     private void FixedUpdate()
     {

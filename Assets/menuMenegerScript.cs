@@ -4,10 +4,19 @@ using UnityEngine.SceneManagement;
 
 public class menuMenegerScript : MonoBehaviour
 {
-    public static bool GameOverBool;
+    public static bool clickOnButton;
     public void ChangeScene(string LoadScene)
     {
         SceneManager.LoadScene("game scene");
-        GameOverBool = false; // menuMenegerScript.GameOverBool = true; ---> at movementforplayer
+        clickOnButton = true; // menuMenegerScript.clickOnButton = true; ---> at movementforplayer
+                              // GetComponent<movmentforplayer>().enabled = true;
+        NewGame1();
+
+
     } 
+
+    public void NewGame1()
+    {
+        destroy.RingIsOut = false;
+    }
 }

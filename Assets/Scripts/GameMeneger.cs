@@ -12,7 +12,7 @@ public class GameMeneger : MonoBehaviour
 {
     [SerializeField] private TMP_Text GameOverText;
     [SerializeField] public GameObject MenuButton; 
-    [SerializeField] private GameObject player;
+    [SerializeField] public GameObject player;
 
 
     private void Start()
@@ -23,11 +23,13 @@ public class GameMeneger : MonoBehaviour
     {
         if (destroy.RingIsOut)
         {
-            menuMenegerScript.GameOverBool = true; // added hear athe menuMenegerScript.GameOverBool = true; 
             GameOverText.enabled = true;
             Invoke("loadScene0", 1f);
             player.GetComponent<movmentforplayer>().enabled = false;
-
+        }else if (!destroy.RingIsOut)
+        {
+            GameOverText.enabled = false;
+            player.GetComponent<movmentforplayer>().enabled = true;
         }
     }
 
