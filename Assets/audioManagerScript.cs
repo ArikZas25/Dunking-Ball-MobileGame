@@ -7,11 +7,12 @@ public class audioManagerScript : MonoBehaviour
 
     [Header("---------- Audio Source ----------")]
     [SerializeField] AudioSource SfxSource;
+    [SerializeField] AudioSource backgroundmusicsource;
 
     [Header("---------- Audio Clip ----------")]
     public AudioClip ringboom;
     public AudioClip jumpsound;
-
+    public AudioClip backgroundmusic;
 
 
     public void playSFX(AudioClip clip)

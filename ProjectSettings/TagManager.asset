@@ -9,6 +9,8 @@ TagManager:
   - point
   - BackWall
   - tuched the ring
+  - Audio
+  - trailholder
   layers:
   - Default
   - TransparentFX
