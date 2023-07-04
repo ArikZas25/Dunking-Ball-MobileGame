@@ -1,4 +1,3 @@
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,7 +5,6 @@ public class menuMenegerScript : MonoBehaviour
 {
     public static bool clickOnButton;
 
- 
     public void ChangeScene(string LoadScene)
     {
         SceneManager.LoadScene("game scene");

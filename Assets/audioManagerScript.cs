@@ -19,4 +19,9 @@ public class audioManagerScript : MonoBehaviour
     {
         SfxSource.PlayOneShot(clip);
     }
+    private void Start()
+    {
+        backgroundmusicsource.clip = backgroundmusic;
+        backgroundmusicsource.Play();
+    }
 }
