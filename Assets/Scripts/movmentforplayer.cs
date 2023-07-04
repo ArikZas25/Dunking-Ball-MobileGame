@@ -78,7 +78,7 @@ public class movmentforplayer : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, 0); //makes the gravity wont work when jumping
         rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse); //adds force up
         rb.AddForce(Vector2.right * TapForceStrengh * Time.deltaTime, ForceMode2D.Impulse); //force right on tap
-        audioManager.playSFX(audioManager.jumpsound);
+        audioManager.playSFX(audioManager.jumpsound); // playes the Jumpsound from the audio Manager 
     }
     void RightForce()
     {
