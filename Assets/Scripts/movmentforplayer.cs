@@ -5,26 +5,34 @@ using TMPro;
 
 public class movmentforplayer : MonoBehaviour
 {
-    [Header("movement")]
+    [Header("--------- movement ---------")]
     [SerializeField] private float Speed; 
     [SerializeField] private float JumpForce;
     [SerializeField] private float TapForceStrengh;
     [SerializeField] private float MaxSpeed;
     [SerializeField] private float Maxgamespeed;
     
-    [Header("other")]
+    [Header("--------- other ---------")]
     //[SerializeField] private int direction = 1; // should change it 
     [SerializeField] private Rigidbody2D rb;
 
-    [Header("ring spawn")]
+    [Header("--------- sound ---------")]
+    audioManagerScript audioManager;
+
+    [Header("--------- ring spawn ---------")]
     [SerializeField] private GameObject[] objectsToInstatiate;
 
-    [Header("prefab")]
+    [Header("--------- prefab ---------")]
     [SerializeField] private GameObject player;
   
-    [Header("GameOver")]
+    [Header("--------- GameOver ---------")]
     [SerializeField] private TMP_Text GameOverText;
 
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<audioManagerScript>();
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -70,6 +78,7 @@ public class movmentforplayer : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, 0); //makes the gravity wont work when jumping
         rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse); //adds force up
         rb.AddForce(Vector2.right * TapForceStrengh * Time.deltaTime, ForceMode2D.Impulse); //force right on tap
+        audioManager.playSFX(audioManager.jumpsound);
     }
     void RightForce()
     {
