@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0013999939, y: -0.0038499832, z: 0}
-    m_Extent: {x: 0.6522, y: 0.65265, z: 0}
+    m_Center: {x: 0.0020499825, y: -0.001150012, z: 0}
+    m_Extent: {x: 0.65335, y: 0.65655, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1471,8 +1471,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0054500103, y: 0.00454998, z: 0}
-    m_Extent: {x: 1.00315, y: 1.00185, z: 0}
+    m_Center: {x: 0.0016500056, y: -0.0009499788, z: 0}
+    m_Extent: {x: 0.99385, y: 0.99535, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1917,8 +1917,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0022999942, y: 0.005250007, z: 0}
-    m_Extent: {x: 0.65540004, y: 0.64865005, z: 0}
+    m_Center: {x: -0.0029000044, y: -0.00055000186, z: 0}
+    m_Extent: {x: 0.6511, y: 0.65734994, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2830,7 +2830,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2929,7 +2929,7 @@ MonoBehaviour:
   SfxSource: {fileID: 1964150691}
   backgroundmusicsource: {fileID: 1964150694}
   ringboom: {fileID: 8300000, guid: c25ede8afe60d3c4eb243b7340abf6e6, type: 3}
-  jumpsound: {fileID: 8300000, guid: 9282669155358344f941a590e5bf4e77, type: 3}
+  jumpsound: {fileID: 8300000, guid: a8a1e4932e14c604596561a5abc93c23, type: 3}
   backgroundmusic: {fileID: 8300000, guid: 06585c6020ba33f46a6c984fa0cf766f, type: 3}
 --- !u!4 &1964150693
 Transform:
@@ -2958,7 +2958,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.416
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0

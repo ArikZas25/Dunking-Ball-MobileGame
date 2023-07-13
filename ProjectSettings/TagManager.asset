@@ -11,6 +11,7 @@ TagManager:
   - tuched the ring
   - Audio
   - trailholder
+  - backgroundaudio
   layers:
   - Default
   - TransparentFX
