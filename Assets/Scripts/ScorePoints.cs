@@ -4,6 +4,7 @@ using TMPro;
 
 public class ScorePoints : MonoBehaviour{
     public TMP_Text MyScoreText;
+    public TextMeshProUGUI highScoreText;
     public TMP_Text comboNum;
     private bool tuchedRing;
     public int score;
@@ -12,11 +13,18 @@ public class ScorePoints : MonoBehaviour{
     public static bool CameraShake;
 
     void Start(){
+        if (score > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+            highScoreText.text = score.ToString();
+        }
         tuchedRing = false;
         score = 0;
         ComboNum = 0;
         comboNum.enabled = false;
         CameraShake = false;
+
+        highScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
     }
 
     public void Update()
@@ -35,6 +43,7 @@ public class ScorePoints : MonoBehaviour{
         comboNum.text = "combo:+" + ComboNum.ToString();
         comboNum.enabled = true;
         }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D tuchedpoint){
@@ -43,13 +52,22 @@ public class ScorePoints : MonoBehaviour{
             score ++;
             MyScoreText.text = score.ToString();
             Invoke("tuchedBeforePoint", 0.1f);
+            if(score > PlayerPrefs.GetInt("HighScore", 0))
+            {
+                PlayerPrefs.SetInt("HighScore", score);
+                highScoreText.text = score.ToString();
+            }
+           
         }
         else if (tuchedpoint.tag == "point" && !tuchedRing)
         {
             GotComboPoint();
             Debug.Log("combo");
+            
         }
     }
+
+   
 
 
 
@@ -71,6 +89,11 @@ public class ScorePoints : MonoBehaviour{
         score += ComboNum;// add + 1
         MyScoreText.text = score.ToString();
         Invoke("CameraStopShake", 0.5f);
+        if (score > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+            highScoreText.text = score.ToString();
+        }
     }
 
     private void CameraStopShake()
