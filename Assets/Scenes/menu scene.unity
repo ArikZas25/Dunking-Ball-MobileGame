@@ -326,8 +326,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00060001016, y: 0.008399993, z: 0}
-    m_Extent: {x: 0.9973, y: 1.0014, z: 0}
+    m_Center: {x: -0.004799992, y: -0.00095000863, z: 0}
+    m_Extent: {x: 1.0015, y: 0.99995005, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -958,8 +958,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.005549997, y: -0.0020500124, z: 0}
-    m_Extent: {x: 0.65055, y: 0.65185, z: 0}
+    m_Center: {x: -0.0015000105, y: -0.0029999912, z: 0}
+    m_Extent: {x: 0.6556, y: 0.65489995, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1141,7 +1141,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 540689446}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2094872042}
+        m_TargetAssemblyTypeName: menuMenegerScript, Assembly-CSharp
+        m_MethodName: restartHighscore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &540689446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2153,8 +2165,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.006099999, y: -0.0019500256, z: 0}
-    m_Extent: {x: 0.6527, y: 0.64835, z: 0}
+    m_Center: {x: 0.0018000007, y: 0.004150003, z: 0}
+    m_Extent: {x: 0.6537, y: 0.65465, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2456,6 +2468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e55320ffa7eb8b47b4d157b969eab99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highScoreText: {fileID: 1120711689}
 --- !u!4 &2094872043
 Transform:
   m_ObjectHideFlags: 0

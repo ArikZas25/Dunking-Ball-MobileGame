@@ -4,7 +4,7 @@ using TMPro;
 
 public class ScorePoints : MonoBehaviour{
     public TMP_Text MyScoreText;
-    public TextMeshProUGUI highScoreText;
+    public TMP_Text highScoreText;
     public TMP_Text comboNum;
     private bool tuchedRing;
     public int score;
