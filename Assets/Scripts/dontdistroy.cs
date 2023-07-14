@@ -10,11 +10,14 @@ public class dontdistroy : MonoBehaviour
     {
         audioManager = GameObject.FindGameObjectWithTag("backgroundaudio").GetComponent<audioManagerScript>();
         GameObject[] musicObj = GameObject.FindGameObjectsWithTag("backgroundaudio");
+        
         if (musicObj.Length > 1)
         {
             Destroy(this.gameObject);
         }
+        
         DontDestroyOnLoad(this.gameObject);
+        
     }
     void Start()
     {
