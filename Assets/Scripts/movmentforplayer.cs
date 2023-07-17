@@ -27,7 +27,10 @@ public class movmentforplayer : MonoBehaviour
   
     [Header("--------- GameOver ---------")]
     [SerializeField] private TMP_Text GameOverText;
-    
+
+    [Header("--------- color ---------")]
+    [SerializeField] private Material myCelingMaterial;
+    [SerializeField] private Material myFloorMaterial;
 
 
     private void Awake()
@@ -38,7 +41,9 @@ public class movmentforplayer : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         GameOverText.enabled = false;
-        
+        myCelingMaterial.color = Color.white;
+        myFloorMaterial.color = Color.white;
+
 
 
     }

@@ -9,6 +9,8 @@ public class ScorePoints : MonoBehaviour{
     private bool tuchedRing;
     public int score;
     public static int ComboNum;
+    [SerializeField] private Material myCelingMaterial;
+    [SerializeField] private Material myFloorMaterial;
 
     public static bool CameraShake;
 
@@ -75,8 +77,27 @@ public class ScorePoints : MonoBehaviour{
 
     private void OnCollisionEnter2D(Collision2D collision){
         tuchedRing = true;
-    }
+        if (collision.collider.tag == "celing")
+        {
+            myCelingMaterial.color = Color.red;
+            GameMeneger.GameIsOver = true;
+        }
+        if (collision.collider.tag == "floor")
+        {
+            myFloorMaterial.color = Color.red;
+            GameMeneger.GameIsOver = true;
+        }
 
+
+    }
+    /*
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+
+        myCelingMaterial.color = Color.yellow;
+        myFloorMaterial.color = Color.yellow;
+    }
+    */
 
     private void tuchedBeforePoint(){
         tuchedRing = false;

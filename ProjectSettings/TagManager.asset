@@ -12,6 +12,8 @@ TagManager:
   - Audio
   - trailholder
   - backgroundaudio
+  - celing
+  - floor
   layers:
   - Default
   - TransparentFX

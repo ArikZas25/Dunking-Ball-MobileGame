@@ -134,9 +134,10 @@ GameObject:
   - component: {fileID: 216079663}
   - component: {fileID: 216079665}
   - component: {fileID: 216079664}
+  - component: {fileID: 216079666}
   m_Layer: 0
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,7 +222,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 463c92c085f95b34e9e9b0544949909c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -253,6 +254,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &216079666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216079662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6d44f2799e7e84eb92a7b0be4fe0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMaterial: {fileID: 2100000, guid: 463c92c085f95b34e9e9b0544949909c, type: 2}
 --- !u!1 &349009303
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,9 +445,10 @@ GameObject:
   - component: {fileID: 507803061}
   - component: {fileID: 507803063}
   - component: {fileID: 507803062}
+  - component: {fileID: 507803064}
   m_Layer: 0
   m_Name: celing
-  m_TagString: Untagged
+  m_TagString: celing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -518,7 +533,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9e7b0a5ebc07b8f4fa8f576736a309ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -550,6 +565,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &507803064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507803060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6d44f2799e7e84eb92a7b0be4fe0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMaterial: {fileID: 2100000, guid: 9e7b0a5ebc07b8f4fa8f576736a309ce, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,6 +1899,8 @@ MonoBehaviour:
   - {fileID: 8114889405236926837, guid: a4e4f4468dbd8e644a63703de23bd354, type: 3}
   player: {fileID: 1465613871}
   GameOverText: {fileID: 875464865}
+  myCelingMaterial: {fileID: 2100000, guid: 9e7b0a5ebc07b8f4fa8f576736a309ce, type: 2}
+  myFloorMaterial: {fileID: 2100000, guid: 463c92c085f95b34e9e9b0544949909c, type: 2}
 --- !u!114 &1465613879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1887,6 +1917,8 @@ MonoBehaviour:
   highScoreText: {fileID: 1018801478}
   comboNum: {fileID: 1736323848}
   score: 0
+  myCelingMaterial: {fileID: 2100000, guid: 9e7b0a5ebc07b8f4fa8f576736a309ce, type: 2}
+  myFloorMaterial: {fileID: 2100000, guid: 463c92c085f95b34e9e9b0544949909c, type: 2}
 --- !u!212 &1465613880
 SpriteRenderer:
   m_ObjectHideFlags: 0
