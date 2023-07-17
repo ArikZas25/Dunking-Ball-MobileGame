@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 216079663}
   - component: {fileID: 216079665}
   - component: {fileID: 216079664}
-  - component: {fileID: 216079666}
   m_Layer: 0
   m_Name: floor
   m_TagString: floor
@@ -254,19 +253,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &216079666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216079662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d6d44f2799e7e84eb92a7b0be4fe0f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myMaterial: {fileID: 2100000, guid: 463c92c085f95b34e9e9b0544949909c, type: 2}
 --- !u!1 &349009303
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,7 +431,6 @@ GameObject:
   - component: {fileID: 507803061}
   - component: {fileID: 507803063}
   - component: {fileID: 507803062}
-  - component: {fileID: 507803064}
   m_Layer: 0
   m_Name: celing
   m_TagString: celing
@@ -565,19 +550,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &507803064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507803060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d6d44f2799e7e84eb92a7b0be4fe0f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myMaterial: {fileID: 2100000, guid: 9e7b0a5ebc07b8f4fa8f576736a309ce, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
