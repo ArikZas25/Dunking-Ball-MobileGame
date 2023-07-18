@@ -85,7 +85,7 @@ public class ScorePoints : MonoBehaviour {
         tuchedRing = true;
         if (tuchedRing)
         {
-            PlayerMat.color = Color.white;
+            PlayerMat.color = Color.red;
         }
         if (collision.collider.tag == "celing")
         {
@@ -97,8 +97,13 @@ public class ScorePoints : MonoBehaviour {
             myFloorMaterial.color = Color.red;
             GameMeneger.GameIsOver = true;
         }
-
-
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (tuchedRing)
+        {
+            PlayerMat.color = Color.white;
+        }
     }
     /*
     private void OnCollisionExit2D(Collision2D collision)
