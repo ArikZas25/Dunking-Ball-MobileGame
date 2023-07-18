@@ -50,26 +50,6 @@ public class ScorePoints : MonoBehaviour {
             comboNum.text = "combo:+" + ComboNumber.ToString();
             comboNum.enabled = true;
         }
-        if (ComboNumber == 1 || ComboNumber == 2)
-        {
-            PlayerMat.color = Color.blue;
-        }
-        if (ComboNumber == 3 || ComboNumber == 4)
-        {
-            PlayerMat.color = Color.cyan;
-        }
-        if (ComboNumber == 5 || ComboNumber == 6)
-        {
-            PlayerMat.color = Color.green;
-        }
-        if (ComboNumber == 7 || ComboNumber == 8)
-        {
-            PlayerMat.color = Color.yellow;
-        }
-        if (ComboNumber == 9 || ComboNumber == 10)
-        {
-            PlayerMat.color = Color.red;
-        }
 
     }
 
@@ -89,6 +69,7 @@ public class ScorePoints : MonoBehaviour {
         else if (tuchedpoint.tag == "point" && !tuchedRing)
         {
             GotComboPoint();
+            CheckifColorChange();
             Debug.Log("combo");
             
         }
@@ -102,6 +83,10 @@ public class ScorePoints : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision){
         tuchedRing = true;
+        if (tuchedRing)
+        {
+            PlayerMat.color = Color.white;
+        }
         if (collision.collider.tag == "celing")
         {
             myCelingMaterial.color = Color.red;
@@ -145,5 +130,34 @@ public class ScorePoints : MonoBehaviour {
     private void CameraStopShake()
     {
         CameraShake = false;
+    }
+
+    void CheckifColorChange()
+    {
+
+        if (ComboNumber == 0)
+        {
+            PlayerMat.color = Color.white;
+        }
+        else if (ComboNumber == 1 || ComboNumber == 2)
+        {
+            PlayerMat.color = Color.blue;
+        }
+        else if (ComboNumber == 3 || ComboNumber == 4)
+        {
+            PlayerMat.color = Color.cyan;
+        }
+        else if (ComboNumber == 5 || ComboNumber == 6)
+        {
+            PlayerMat.color = Color.green;
+        }
+        else if (ComboNumber == 7 || ComboNumber == 8)
+        {
+            PlayerMat.color = Color.yellow;
+        }
+        else if (ComboNumber == 9 || ComboNumber == 10)
+        {
+            PlayerMat.color = Color.red;
+        }
     }
 }

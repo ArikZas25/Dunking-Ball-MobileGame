@@ -7,10 +7,12 @@ public class menuMenegerScript : MonoBehaviour
 {
     public static bool clickOnButton;
     public TMP_Text highScoreText;
+    [SerializeField] private Material PlayerMat;
 
     public void Start()
     {
         highScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+        PlayerMat.color = Color.white;
     }
     public void ChangeScene(string LoadScene)
     {
