@@ -36,7 +36,7 @@ public class CameraShakeScript : MonoBehaviour
     {
         if (shakeTimer > 0)
         {
-            cameraTransform.localPosition = originalCameraPos + Random.insideUnitSphere * shakeAmount * (ScorePoints.ComboNum * 0.2f);
+            cameraTransform.localPosition = originalCameraPos + Random.insideUnitSphere * shakeAmount * (ScorePoints.ComboNumber * 0.2f);
             shakeTimer -= Time.deltaTime;
 
         }

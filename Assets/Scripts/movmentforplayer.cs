@@ -32,6 +32,7 @@ public class movmentforplayer : MonoBehaviour
     [SerializeField] private Material myCelingMaterial;
     [SerializeField] private Material myFloorMaterial;
     [SerializeField] private Material defultMat;
+    [SerializeField] private Material PlayerMat;
 
 
     private void Awake()
@@ -44,7 +45,7 @@ public class movmentforplayer : MonoBehaviour
         GameOverText.enabled = false;
         myCelingMaterial.color = defultMat.color;
         myFloorMaterial.color = defultMat.color;
-
+        PlayerMat.color = Color.white;
 
 
     }

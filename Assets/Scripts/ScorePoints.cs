@@ -2,19 +2,24 @@ using UnityEngine;
 using TMPro;
 
 
-public class ScorePoints : MonoBehaviour{
+public class ScorePoints : MonoBehaviour {
+    [Header("--------- score ---------")]
     public TMP_Text MyScoreText;
     public TMP_Text highScoreText;
     public TMP_Text comboNum;
     private bool tuchedRing;
     public int score;
-    public static int ComboNum;
+    public static int ComboNumber;
+
+    [Header("--------- color ---------")]
     [SerializeField] private Material myCelingMaterial;
     [SerializeField] private Material myFloorMaterial;
+    [SerializeField] private Material PlayerMat;
 
+    [Header("--------- shake ---------")]
     public static bool CameraShake;
 
-    void Start(){
+    void Start() {
         if (score > PlayerPrefs.GetInt("HighScore", 0))
         {
             PlayerPrefs.SetInt("HighScore", score);
@@ -22,7 +27,7 @@ public class ScorePoints : MonoBehaviour{
         }
         tuchedRing = false;
         score = 0;
-        ComboNum = 0;
+        ComboNumber = 0;
         comboNum.enabled = false;
         CameraShake = false;
 
@@ -31,21 +36,41 @@ public class ScorePoints : MonoBehaviour{
 
     public void Update()
     {
-        if (ComboNum > 10)
+        if (ComboNumber > 10)
         {
-            ComboNum = 10;
-            comboNum.text = "combo:+" + ComboNum.ToString();
+            ComboNumber = 10;
+            comboNum.text = "combo:+" + ComboNumber.ToString();
         }
-        else if (ComboNum <= 0)
+        else if (ComboNumber <= 0)
         {
             comboNum.enabled = false;
             comboNum.text = "combo:+" + 0.ToString();
         }
-        if (ComboNum > 0) { 
-        comboNum.text = "combo:+" + ComboNum.ToString();
-        comboNum.enabled = true;
+        if (ComboNumber > 0) {
+            comboNum.text = "combo:+" + ComboNumber.ToString();
+            comboNum.enabled = true;
         }
-        
+        if (ComboNumber == 1 || ComboNumber == 2)
+        {
+            PlayerMat.color = Color.blue;
+        }
+        if (ComboNumber == 3 || ComboNumber == 4)
+        {
+            PlayerMat.color = Color.cyan;
+        }
+        if (ComboNumber == 5 || ComboNumber == 6)
+        {
+            PlayerMat.color = Color.green;
+        }
+        if (ComboNumber == 7 || ComboNumber == 8)
+        {
+            PlayerMat.color = Color.yellow;
+        }
+        if (ComboNumber == 9 || ComboNumber == 10)
+        {
+            PlayerMat.color = Color.red;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D tuchedpoint){
@@ -101,13 +126,13 @@ public class ScorePoints : MonoBehaviour{
 
     private void tuchedBeforePoint(){
         tuchedRing = false;
-        ComboNum = 0;
+        ComboNumber = 0;
     }
     private void GotComboPoint(){
         CameraShake = true;
         score++;
-        ComboNum ++;
-        score += ComboNum;// add + 1
+        ComboNumber++;
+        score += ComboNumber;// add + 1
         MyScoreText.text = score.ToString();
         Invoke("CameraStopShake", 0.5f);
         if (score > PlayerPrefs.GetInt("HighScore", 0))
