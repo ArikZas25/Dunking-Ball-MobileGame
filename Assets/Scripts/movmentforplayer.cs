@@ -31,6 +31,7 @@ public class movmentforplayer : MonoBehaviour
     [Header("--------- color ---------")]
     [SerializeField] private Material myCelingMaterial;
     [SerializeField] private Material myFloorMaterial;
+    [SerializeField] private Material defultMat;
 
 
     private void Awake()
@@ -41,8 +42,8 @@ public class movmentforplayer : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         GameOverText.enabled = false;
-        myCelingMaterial.color = Color.white;
-        myFloorMaterial.color = Color.white;
+        myCelingMaterial.color = defultMat.color;
+        myFloorMaterial.color = defultMat.color;
 
 
 
