@@ -6,6 +6,7 @@ public class dontdistroy : MonoBehaviour
 {
     [Header("--------- sound ---------")]
     audioManagerScript audioManager;
+    public AudioSource source;
     void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("backgroundaudio").GetComponent<audioManagerScript>();
@@ -21,7 +22,14 @@ public class dontdistroy : MonoBehaviour
     }
     void Start()
     {
-        audioManager.playSFX(audioManager.backgroundmusic);
+        //audioManager.playSFX(audioManager.backgroundmusic);
+    }
+    private void Update()
+    {
+        if (!source.isPlaying)
+        {
+            source.Play();
+        }
     }
 
 

@@ -14,6 +14,7 @@ public class gotored : MonoBehaviour
             if (collision.tag == "player")
             {
                 myMaterial.color = Color.red;
+           
 
             }
         
