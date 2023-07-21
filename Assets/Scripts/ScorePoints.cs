@@ -15,6 +15,17 @@ public class ScorePoints : MonoBehaviour {
     [SerializeField] private Material myCelingMaterial;
     [SerializeField] private Material myFloorMaterial;
     [SerializeField] private Material PlayerMat;
+    [SerializeField] private Material combo1color;
+    [SerializeField] private Material combo2color;
+    [SerializeField] private Material combo3color;
+    [SerializeField] private Material combo4color;
+    [SerializeField] private Material combo5color;
+    [SerializeField] private Material combo6color;
+    [SerializeField] private Material combo7color;
+    [SerializeField] private Material combo8color;
+    [SerializeField] private Material combo9color;
+    [SerializeField] private Material combo10color;
+
 
     [Header("--------- shake ---------")]
     public static bool CameraShake;
@@ -144,25 +155,45 @@ public class ScorePoints : MonoBehaviour {
         {
             PlayerMat.color = Color.white;
         }
-        else if (ComboNumber == 2 || ComboNumber == 3)
+        else if (ComboNumber == 1)
         {
-            PlayerMat.color = Color.cyan;
+            PlayerMat.color = combo1color.color;
         }
-        else if (ComboNumber == 4 || ComboNumber == 5)
+        else if (ComboNumber == 2)
         {
-            PlayerMat.color = Color.blue;
+            PlayerMat.color = combo2color.color;
         }
-        else if (ComboNumber == 6 || ComboNumber == 7)
+        else if (ComboNumber == 3)
         {
-            PlayerMat.color = Color.green;
+            PlayerMat.color = combo3color.color;
         }
-        else if (ComboNumber == 8 || ComboNumber == 9)
+        else if (ComboNumber == 4)
         {
-            PlayerMat.color = Color.yellow;
+            PlayerMat.color = combo4color.color;
+        }
+        else if (ComboNumber == 5)
+        {
+            PlayerMat.color = combo5color.color;
+        }
+        else if (ComboNumber == 6)
+        {
+            PlayerMat.color = combo6color.color;
+        }
+        else if (ComboNumber == 7)
+        {
+            PlayerMat.color = combo7color.color;
+        }
+        else if (ComboNumber == 8)
+        {
+            PlayerMat.color = combo8color.color;
+        }
+        else if (ComboNumber == 9)
+        {
+            PlayerMat.color = combo9color.color;
         }
         else if (ComboNumber == 10)
         {
-            PlayerMat.color = Color.black;
+            PlayerMat.color = combo10color.color;
 
         }
     }

@@ -1894,6 +1894,16 @@ MonoBehaviour:
   myCelingMaterial: {fileID: 2100000, guid: 9e7b0a5ebc07b8f4fa8f576736a309ce, type: 2}
   myFloorMaterial: {fileID: 2100000, guid: 463c92c085f95b34e9e9b0544949909c, type: 2}
   PlayerMat: {fileID: 2100000, guid: f6ee910e0cc69254caf4074a43bdd787, type: 2}
+  combo1color: {fileID: 2100000, guid: e9586f30c65135b46afe173d7438ca0b, type: 2}
+  combo2color: {fileID: 2100000, guid: 1b9a454c608101c4cb50c82cef770e50, type: 2}
+  combo3color: {fileID: 2100000, guid: 8c31b7fb47d516a4aaa4789a512a1d69, type: 2}
+  combo4color: {fileID: 2100000, guid: 556830e9df68093429c861609f2ad84f, type: 2}
+  combo5color: {fileID: 2100000, guid: 3bc322f03ec003c4fbac06c729226218, type: 2}
+  combo6color: {fileID: 2100000, guid: dcb7402814e7fe947b1ffcdea129ab59, type: 2}
+  combo7color: {fileID: 2100000, guid: 3db0bbd281ad4e34baa65e42ba6afb77, type: 2}
+  combo8color: {fileID: 2100000, guid: 4a2f38d11d630e54b91198b9e5072473, type: 2}
+  combo9color: {fileID: 2100000, guid: 3994a6aa8eb51054792829663a9a0c89, type: 2}
+  combo10color: {fileID: 2100000, guid: b16f8caa1ce8b9d4b9d0bfb059743f4c, type: 2}
 --- !u!212 &1465613880
 SpriteRenderer:
   m_ObjectHideFlags: 0
