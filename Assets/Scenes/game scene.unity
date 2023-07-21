@@ -2436,6 +2436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverText: {fileID: 875464865}
+  HighScoreText: {fileID: 1018801478}
   MenuButton: {fileID: 1647102699}
   player: {fileID: 1465613871}
 --- !u!4 &1739445727
