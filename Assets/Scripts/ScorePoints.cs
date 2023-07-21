@@ -144,25 +144,26 @@ public class ScorePoints : MonoBehaviour {
         {
             PlayerMat.color = Color.white;
         }
-        else if (ComboNumber == 1 || ComboNumber == 2)
-        {
-            PlayerMat.color = Color.blue;
-        }
-        else if (ComboNumber == 3 || ComboNumber == 4)
+        else if (ComboNumber == 2 || ComboNumber == 3)
         {
             PlayerMat.color = Color.cyan;
         }
-        else if (ComboNumber == 5 || ComboNumber == 6)
+        else if (ComboNumber == 4 || ComboNumber == 5)
+        {
+            PlayerMat.color = Color.blue;
+        }
+        else if (ComboNumber == 6 || ComboNumber == 7)
         {
             PlayerMat.color = Color.green;
         }
-        else if (ComboNumber == 7 || ComboNumber == 8)
+        else if (ComboNumber == 8 || ComboNumber == 9)
         {
             PlayerMat.color = Color.yellow;
         }
-        else if (ComboNumber == 9 || ComboNumber == 10)
+        else if (ComboNumber == 10)
         {
-            PlayerMat.color = Color.red;
+            PlayerMat.color = Color.black;
+
         }
     }
 }

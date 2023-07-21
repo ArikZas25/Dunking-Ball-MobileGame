@@ -10,9 +10,13 @@ using UnityEngine.SceneManagement;
 
 public class GameMeneger : MonoBehaviour
 {
+    [Header("--------- Text ---------")]
     [SerializeField] private TMP_Text GameOverText;
+    [SerializeField] private TMP_Text HighScoreText;
+    [Header("--------- GameObject ---------")]
     [SerializeField] public GameObject MenuButton; 
     [SerializeField] public GameObject player;
+    [Header("--------- static bool ---------")]
     [SerializeField] public static bool GameIsOver;
 
   
@@ -56,12 +60,14 @@ public class GameMeneger : MonoBehaviour
     private void GmaeOver()
     {
         GameOverText.enabled = true;
+        HighScoreText.enabled = true;
         Invoke("loadScene0", 1f);
         player.GetComponent<movmentforplayer>().enabled = false;
     }
     private void continueplaying()
     {
         GameOverText.enabled = false;
+        HighScoreText.enabled = false;
         player.GetComponent<movmentforplayer>().enabled = true;
     }
 }
