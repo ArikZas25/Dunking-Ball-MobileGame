@@ -30,6 +30,9 @@ public class ScorePoints : MonoBehaviour {
     [Header("--------- shake ---------")]
     public static bool CameraShake;
 
+   
+
+
     void Start() {
         if (score > PlayerPrefs.GetInt("HighScore", 0))
         {
@@ -66,8 +69,8 @@ public class ScorePoints : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D tuchedpoint){
        
-        if (tuchedpoint.tag == "point" && tuchedRing){  
-            score ++;
+        if (tuchedpoint.tag == "point" && tuchedRing){
+            normal1point();
             MyScoreText.text = score.ToString();
             Invoke("tuchedBeforePoint", 0.1f);
             if(score > PlayerPrefs.GetInt("HighScore", 0))
@@ -131,7 +134,7 @@ public class ScorePoints : MonoBehaviour {
     }
     private void GotComboPoint(){
         CameraShake = true;
-        score++;
+        normal1point();
         ComboNumber++;
         score += ComboNumber;// add + 1
         MyScoreText.text = score.ToString();
@@ -196,5 +199,14 @@ public class ScorePoints : MonoBehaviour {
             PlayerMat.color = combo10color.color;
 
         }
+
+        
     }
+    void normal1point()
+    {
+        score++;
+       
+    }
+
+
 }
